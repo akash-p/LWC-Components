@@ -1,0 +1,18 @@
+<template>
+    <lightning-card title="Various Toast">
+        <lightning-layout horizontal-align="space" multiple-rows>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-button name="infoToast" label="Generate Default Toast (variant=info)" onclick={generateInfoToast}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-button name="successToast" variant="success" label="Generate Toast (variant=success)" onclick={generateSuccessToast}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-button name="warningToast" variant="brand" label="Generate Toast (variant=warning)" onclick={generateWarningToast}></lightning-button>
+            </lightning-layout-item>
+            <lightning-layout-item size="6" padding="around-small">
+                <lightning-button name="errorToast" variant="destructive" label="Generate Toast (variant=error)" onclick={generateErrorToast}></lightning-button>
+            </lightning-layout-item>
+        </lightning-layout>
+    </lightning-card>
+</template>
