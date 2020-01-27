@@ -1,0 +1,30 @@
+<template>
+    <lightning-card >
+        <h3 slot="title">
+            <lightning-icon icon-name="action:user" size="small"></lightning-icon>
+            Contact Details
+        </h3>
+        <lightning-layout horizontal-align="space" multiple-rows>
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-input name="firstName" label="First Name" onchange={inputData} required></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-input name="middleName" label="Middle Name" onchange={inputData} ></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" padding="around-small" >
+                <lightning-input name="lastName" label="Last Name" onchange={inputData} required></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-input type="email" name="email" label="Email" onchange={inputData} required></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-input type="date" name="dob" label="Date of Birth" onchange={inputData} required ></lightning-input>
+            </lightning-layout-item>
+            <lightning-layout-item size="4" padding="around-small">
+                <lightning-input name="collegeName" label="Institution/Organization" onchange={inputData} 
+                field-level-help="Name of Institution or Organization from where you have passed out"></lightning-input>
+            </lightning-layout-item>
+            <lightning-button name="submit" label="Create Contact (wire service to create records)" onclick={createContact}></lightning-button>
+        </lightning-layout>
+    </lightning-card> 
+</template>
